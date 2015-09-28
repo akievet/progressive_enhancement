@@ -4,27 +4,28 @@
     <title>Title</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css" media="all">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <textarea id="source">
 
 class: center, middle
 
-Abstract: Ever feel frustrated when you have to wait for some fancy JavaScript component to load to get to the content of a website? There's a solution for developing modern web apps without compromising accessibility and responsiveness. In this talk, I will explain what progressive enhancement is and how to use it.
+<!-- "This talk is about how to use progressive enhancement to craft accessible,
+  well-structured, and device agnostic code. As a junior developer, I found 
+  the world of endless JS frameworks intimidating and chaotic, with battles 
+  being waged between evangelists on Twitter. Using progressive enhancement 
+  creates a more Zen experience by keeping your codebase simpler and easier to 
+  reason about. In a world where new frameworks, libraries, and architecture 
+  styles are going in and out of fashion with the seasons, everyone could use a little more Zen." -->
 
-
-
-"This talk is about how to use progressive enhancement to craft accessible, well-structured, and device agnostic code. As a junior developer, I found the world of endless JS frameworks intimidating and chaotic, with battles being waged between evangelists on Twitter. Using progressive enhancement creates a more Zen experience by keeping your codebase simpler and easier to reason about. In a world where new frameworks, libraries, and architecture styles are going in and out of fashion with the seasons, everyone could use a little more Zen."
-
-
----
 
 # Progressive Enhancement
 
 ---
 
 # The What
-![Nature](./images/woods.png)
+.center[![Nature](./images/woods.png)]
 
 
 ???
@@ -37,7 +38,12 @@ Abstract: Ever feel frustrated when you have to wait for some fancy JavaScript c
 
 ---
 
-“Yeah, no, wow, it says you have a lot of Gulp and Angular, but I’m guessing you don’t use Fleejob or Grimmex with the Snurt extensions? (Long sigh.) I’m just not sure if you’re gonna like working here.” -- Bloomberg
+class: quote
+
+“Yeah, no, wow, it says you have a lot of Gulp and Angular, 
+but I’m guessing you don’t use Fleejob or Grimmex with the 
+Snurt extensions? (Long sigh.) I’m just not sure if you’re
+gonna like working here.” &mdash; Bloomberg
 
 
 ???
@@ -47,7 +53,9 @@ Before quote: "JavaScript is fast-moving right now. Too much of what you know to
 
 ---
 
-![Rachel Andrews FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f616b696576657470686f746f732f72616368656c2e6a7067)
+class: fullstack, center
+
+.center[![Rachel Andrews FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f616b696576657470686f746f732f72616368656c2e6a7067)]
 
 ???
 
@@ -59,7 +67,12 @@ Saw Rachel Andrews speak at Full Stack Fest keynote. Breath of fresh air.
 
 ---
 
-"a robust site or application in the more traditional sense minimizes its dependencies. The minimum dependency for a web site should be an internet connection and the ability to parse HTML." -- BBC Future Media Standards and Guidelines
+class: quote
+
+"a robust site or application in the more traditional sense 
+minimizes its dependencies. The minimum dependency for a web 
+site should be an internet connection and the ability to parse HTML." 
+&mdash; BBC Future Media Standards and Guidelines
 
 ???
 
@@ -73,7 +86,11 @@ Two birds, one stone. Have a genuinely good place to begin learning (the basics)
 
 ---
 
-![Picture of wrapped gift](./images/gift.png)
+class: painted-image, margin-top
+
+# Platform
+
+.center[![Picture of wrapped gift](./images/gift.png)]
 
 ???
 
@@ -81,13 +98,20 @@ Platforms are static, defined software environments responsible for running neat
 
 ---
 
-![Picture of a ship in a storm](./images/ship.png)
+class: painted-image, margin-top
+
+# Web App
+
+.center[![Picture of a ship in a storm](./images/ship.png)]
+
 
 ???
 
 This is the web
 
 ---
+
+class: center
 
 # Web != Platform
 
@@ -98,18 +122,22 @@ The web is a continuum.
 
 ---
 
-![A site with no content waiting on JS to load](./images/loading.png)
+class: painted-image-large, margin-top
+
+.center[![A site with no content waiting on JS to load](./images/loading.png)]
 
 ???
 
-Ever see something like this? 
+Ever see something like this?
 
 ---
 
+class: painted-image-large, margin-top
+
 # Why are HTML/CSS Good and JS Evil?
 
-![Picture of JS Stopping Everything for a little error// Single Point of
-Failure](./images/rope.png)
+.center[![Picture of JS Stopping Everything for a little error// Single Point of
+Failure](./images/rope.png)]
 
 ???
 
@@ -117,12 +145,14 @@ if css and html have behavior unsupported by a browser, they will simply ignore 
 
 SPOF: ‘a part of a system that, if it fails, will stop the entire system from working. SPOFs are undesirable in any system with a goal of high availability or reliability, be it a business practice, software application, or other industrial system’
 
-___
+---
+
+class: painted-image, margin-top
 
 # How did we get into this problem
 
-![Coercing printed page onto the web across
-browsers](./images/printed_to_screen.png)
+.center[![Coercing printed page onto the web across
+browsers](./images/printed_to_screen.png)]
 
 ???
 
@@ -130,9 +160,11 @@ JS is an appealing solution as a way to exert control over the web.
 
 ---
 
+class: painted-image
+
 # John Allsopp: A Dao of Web Design
 
-![Designer as God](./images/designer.png)
+.center[![Designer as God](./images/designer.png)]
 
 ???
 
@@ -150,17 +182,22 @@ Legacy of print design
 
 ---
 
+class: painted-image-large, margin-top
+
 # Web != Print
-![The *promise* of the web... A Better tomorrow. Accessibility to
-information](./images/bright_tomorrow.png)
+
+.center[![The *promise* of the web... A Better tomorrow. Accessibility to
+information](./images/bright_tomorrow.png)]
 
 ???
 Facts of the medium of Web: It's adaptable and accessible! Regardless of the browser, platform or screen your reader chooses
 
 ---
 
-![Actions over Looks; Form follows Function (Img of LaCorbusier
-building?)](./images/lamp.png)
+class: painted-image-large, margin-top
+
+.center[![Actions over Looks; Form follows Function (Img of LaCorbusier
+building?)](./images/lamp.png)]
 
 ???
 
@@ -168,9 +205,9 @@ Your site will not look the same across browsers/devices. Think about what your 
 
 ---
 
-Use HTML to convey information
-- Use `em` instead of `i` if you want to italicize for emphasis
-- Use form attributes appropriately [find radio button/checkbox anti-patterns]
+# Use HTML to convey information
+### Use `em` instead of `i` if you want to italicize for emphasis
+### Use form attributes appropriately [find radio button/checkbox anti-patterns]
 
 ???
 
@@ -178,9 +215,9 @@ Don't use HTML for presentation
 
 ---
 
-Use CSS to *suggest* appearance. Don't rely on it.
-- Downloading fonts might not work. Have a fallback
-- Avoid absolute font sizes
+#Use CSS to *suggest* appearance. Don't rely on it.
+### Downloading fonts might not work. Have a fallback
+### Avoid absolute font sizes
 
 ???
 
@@ -189,12 +226,14 @@ Screens are less readable than paper because of their low resolution.
 
 ---
 
-Mobile-first structured CSS
+# Mobile-first structured CSS
 
 ---
 
+class: margin-top, painted-image-large
+
 # Graceful Degradation vs. Progressive Enhancement
-![Img of how they differ](./images/prog_enhancement.png)
+.center[![Img of how they differ](./images/prog_enhancement.png)]
 
 ---
 
@@ -211,7 +250,7 @@ Flesh these out if keeping in here
 
 # The argument against PE
 
-Some people will say...
+# Some people will say...
 
 ???
 Argument Against:
@@ -221,7 +260,7 @@ Argument Against:
 
 ---
 
-Disclaimer: This is sort of a rant.
+# Disclaimer: This is sort of a rant.
 
 ???
 
@@ -237,7 +276,7 @@ Of course PE might not be appropriate 100% of the time.
 
 ---
 
-##Design in text
+# Design in text
 
 ???
 
@@ -246,7 +285,9 @@ Debate over whether things are Apps vs Documents. If it's on the web, it's proba
 
 ---
 
-[Hierarchies of Linear structured test]
+class: painted-image, margin-top
+
+.center[![Hierarchies of Linear structured test](./images/structured_html.png)]
 
 ???
 
@@ -258,22 +299,24 @@ Benefits:
 
 ---
 
-Use a non-distracting text editor
-Byword
+## Use a non-distracting text editor
 
 ---
+
+class: painted-image, margin-top
 
 ## Use Feature Detection
 
-![Picture of Modernizr](./images/modernizr.png)
+.center[![Picture of Modernizr](./images/modernizr.png)]
 
 ---
 
-Avoid turning shortcuts and third party code into dependencies
+## Avoid turning shortcuts and third party code into dependencies
 
 ---
-
-"Progressive enhancement is the *best* web development strategy based on it being *the right thing to do*" -- Jason Garber
+class: quote
+"Progressive enhancement is the *best* web development strategy based 
+on it being *the right thing to do*" &mdash; Jason Garber
 
 ---
 
@@ -281,23 +324,27 @@ Avoid turning shortcuts and third party code into dependencies
 
 ---
 
-Learn and teach core skills: HTML, CSS, JavaScript
+## Learn and teach core skills: HTML, CSS, JavaScript
 
 ---
 
-Use PE from the get-go, it's a pain to implement later
+## Use PE from the get-go, it's a pain to implement later
 
 ---
 
-PE is cheaper to maintain since simpler code is more maintainable code
+## PE is cheaper to maintain since simpler code is more maintainable code
 
 ---
 
-Pay Attention to Web Standards 
+## Pay Attention to Web Standards 
 
 ---
 
-"It should be clear our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all." -- John Allsopp
+class: quote
+
+"It should be clear our role as designers and developers to 
+embrace this flexibility, and produce pages which, by being 
+flexible, are accessible to all." &mdash; John Allsopp
 
 ---
 

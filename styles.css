@@ -2,13 +2,39 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-body { font-family: 'Futura'; }
+body { font-family: 'Merriweather', serif}
+
 h1, h2, h3 {
-  font-family: 'Futura';
-  font-weight: normal;
+  font-weight: 700;
 }
+
+.quote p{
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.fullstack img {
+  width: 100%;
+}
+
+.painted-image img{
+  width: 50%;
+}
+
+.painted-image-large img {
+  width: 75%;
+}
+
+.margin-top img{
+  margin-top: 100px;
+}
+
+
 .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
 img {
-  width: 500px;
+  width: 70%;
 }
+
