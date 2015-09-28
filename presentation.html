@@ -10,21 +10,310 @@
 
 class: center, middle
 
+Abstract: Ever feel frustrated when you have to wait for some fancy JavaScript component to load to get to the content of a website? There's a solution for developing modern web apps without compromising accessibility and responsiveness. In this talk, I will explain what progressive enhancement is and how to use it.
+
+
+
+"This talk is about how to use progressive enhancement to craft accessible, well-structured, and device agnostic code. As a junior developer, I found the world of endless JS frameworks intimidating and chaotic, with battles being waged between evangelists on Twitter. Using progressive enhancement creates a more Zen experience by keeping your codebase simpler and easier to reason about. In a world where new frameworks, libraries, and architecture styles are going in and out of fashion with the seasons, everyone could use a little more Zen."
+
+
+---
+
 # Progressive Enhancement
 
 ---
 
-# Agenda
+# The What
+![Nature](./images/woods.png)
 
-1. Introduction
-2. Deep-dive
-3. ...
+
+???
+
+"Progressive enhancement is a strategy for web design that *emphasizes accessibility*, semantic HTML markup, and external stylesheet and scripting technologies. Progressive enhancement *uses web technologies in a layered fashion* that allows everyone to *access the basic content and functionality* of a web page, using any browser or Internet connection, while also providing an enhanced version of the page to those with more advanced browser software or greater bandwidth." -- wikipedia
 
 ---
 
-# Resources
-* [sixtwothree - The Practical Case for Progressive Enhancement](http://sixtwothree.org/posts/the-practical-case-for-progressive-enhancement)
+# Why I Care
 
+---
+
+“Yeah, no, wow, it says you have a lot of Gulp and Angular, but I’m guessing you don’t use Fleejob or Grimmex with the Snurt extensions? (Long sigh.) I’m just not sure if you’re gonna like working here.” -- Bloomberg
+
+
+???
+
+Fed up with 'new hotness' and the insecurities of trying to catch up
+Before quote: "JavaScript is fast-moving right now. Too much of what you know today will be useless in six months. Every hard-fought factoid about the absolute best and most principled way to use the language will be fetid zoo garbage by the end of the year. And some sniveling, bearded man-toddler will be looking slightly to your right with his pale, buzzword-infected eyes and awkwardly mumbling,"
+
+---
+
+![Rachel Andrews FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f616b696576657470686f746f732f72616368656c2e6a7067)
+
+???
+
+Saw Rachel Andrews speak at Full Stack Fest keynote. Breath of fresh air.
+- Involved with web standards project
+- Co-founder of Perch CMS
+- Super speaker
+
+
+---
+
+"a robust site or application in the more traditional sense minimizes its dependencies. The minimum dependency for a web site should be an internet connection and the ability to parse HTML." -- BBC Future Media Standards and Guidelines
+
+???
+
+From her slides. Also, the site says "The core purpose of every document must not require JavaScript or CSS to function"
+Two birds, one stone. Have a genuinely good place to begin learning (the basics) and also create a site accessible to all from the start.
+
+---
+
+
+# Why?
+
+---
+
+![Picture of wrapped gift](./images/gift.png)
+
+???
+
+Platforms are static, defined software environments responsible for running neatly packaged bundles of code
+
+---
+
+![Picture of a ship in a storm](./images/ship.png)
+
+???
+
+This is the web
+
+---
+
+# Web != Platform
+
+???
+
+The web is a continuum.
+
+
+---
+
+![A site with no content waiting on JS to load](./images/loading.png)
+
+???
+
+Ever see something like this? 
+
+---
+
+# Why are HTML/CSS Good and JS Evil?
+
+![Picture of JS Stopping Everything for a little error// Single Point of
+Failure](./images/rope.png)
+
+???
+
+if css and html have behavior unsupported by a browser, they will simply ignore it. Browsers will throw an error and stop processing JS => Single Point of Failure
+
+SPOF: ‘a part of a system that, if it fails, will stop the entire system from working. SPOFs are undesirable in any system with a goal of high availability or reliability, be it a business practice, software application, or other industrial system’
+
+___
+
+# How did we get into this problem
+
+![Coercing printed page onto the web across
+browsers](./images/printed_to_screen.png)
+
+???
+
+JS is an appealing solution as a way to exert control over the web.
+
+---
+
+# John Allsopp: A Dao of Web Design
+
+![Designer as God](./images/designer.png)
+
+???
+
+Belief that designers are controllers
+Designers want to:
+- override the wishes of users and the choices they have made about their viewing experience
+- second guess platform differences, caused by different logical resolutions
+- all-knowing
+- will not tolerate anything less than a rendering on every browser that is pixel perfect with the rendering on their own machine
+
+Legacy of print design 
+- dimensions of a page can be controlled
+- size of the text
+- *facts* of the medium
+
+---
+
+# Web != Print
+![The *promise* of the web... A Better tomorrow. Accessibility to
+information](./images/bright_tomorrow.png)
+
+???
+Facts of the medium of Web: It's adaptable and accessible! Regardless of the browser, platform or screen your reader chooses
+
+---
+
+![Actions over Looks; Form follows Function (Img of LaCorbusier
+building?)](./images/lamp.png)
+
+???
+
+Your site will not look the same across browsers/devices. Think about what your pages do, not what they look like.
+
+---
+
+Use HTML to convey information
+- Use `em` instead of `i` if you want to italicize for emphasis
+- Use form attributes appropriately [find radio button/checkbox anti-patterns]
+
+???
+
+Don't use HTML for presentation
+
+---
+
+Use CSS to *suggest* appearance. Don't rely on it.
+- Downloading fonts might not work. Have a fallback
+- Avoid absolute font sizes
+
+???
+
+With CSS you can suggest a number of fonts, but don't rely on a font being available regardless of how common it is.
+Screens are less readable than paper because of their low resolution. 
+
+---
+
+Mobile-first structured CSS
+
+---
+
+# Graceful Degradation vs. Progressive Enhancement
+![Img of how they differ](./images/prog_enhancement.png)
+
+---
+
+# Case Studies
+* Google
+* Twitter
+
+???
+
+Flesh these out if keeping in here
+
+
+---
+
+# The argument against PE
+
+Some people will say...
+
+???
+Argument Against:
+- JS is the baseline in 2015
+- Big companies are doing it (Instagram, Sack, Facebook, YouTube, Ebay Pinterest...)
+- Programmers should aim to catch errors before they cause problems
+
+---
+
+Disclaimer: This is sort of a rant.
+
+???
+
+PE comes out of an egalitarian philosophy about the nature of the web. It may not always be the most practical thing to do, but it's good to shoot for.
+"oh, that's still a thing?" YES
+I'm passionate about it. 
+Important for all new developers to hear about, especially in the face of "hot new things" going around in the JavaScript world.
+Of course PE might not be appropriate 100% of the time. 
+
+---
+
+# Tips
+
+---
+
+##Design in text
+
+???
+
+Debate over whether things are Apps vs Documents. If it's on the web, it's probably both!
+- Problem: many websites are designed from the UI in rather than from the content out
+
+---
+
+[Hierarchies of Linear structured test]
+
+???
+
+Start with the text-based foundation of the website or application you’re designing, and then add the complex interface as a layer on top of this text base.
+Benefits: 
+- Focus on the structure of textual content
+- Irrelevant content becomes easy to spot (not hidden by design)
+- Easy to convert from word processor documents into structured plain text
+
+---
+
+Use a non-distracting text editor
+Byword
+
+---
+
+## Use Feature Detection
+
+![Picture of Modernizr](./images/modernizr.png)
+
+---
+
+Avoid turning shortcuts and third party code into dependencies
+
+---
+
+"Progressive enhancement is the *best* web development strategy based on it being *the right thing to do*" -- Jason Garber
+
+---
+
+# Takeaways
+
+---
+
+Learn and teach core skills: HTML, CSS, JavaScript
+
+---
+
+Use PE from the get-go, it's a pain to implement later
+
+---
+
+PE is cheaper to maintain since simpler code is more maintainable code
+
+---
+
+Pay Attention to Web Standards 
+
+---
+
+"It should be clear our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all." -- John Allsopp
+
+---
+
+## Resources
+1. [Wikipedia: Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
+2. [Bloomberg Business: "What Is Code" by Paul Ford](http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
+2. Rachel Andrew- The Business of Front-end Development [Resources](https://rachelandrew.co.uk/presentations/business-of-front-end?utm_content=buffer9dcc0&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)/[Slides](https://speakerdeck.com/rachelandrew/the-business-of-front-end-development)
+3. [BBC Future Media Standards and Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/html/progressive-enhancement.shtml)
+4. [Adactio Continuum](https://adactio.com/journal/6692)
+2. Jason Garber- [The Practical Case for Progressive Enhancement](http://sixtwothree.org/posts/the-practical-case-for-progressive-enhancement), [Designing Experience Layers](http://sixtwothree.org/posts/designing-experience-layers), [In Defense of Progressive Enhancement](http://sixtwothree.org/posts/in-defense-of-progressive-enhancement)
+3. [Doug Avery's Response to Design Experience Layers](https://viget.com/inspire/designing-experience-layers#comment-1847156038)
+5. [SPOF](https://en.wikipedia.org/wiki/Single_point_of_failure)
+6. [John Allsopp: A Dao Of Web Design](http://alistapart.com/article/dao)
+7. [Designing in Text](http://www.peachpit.com/articles/article.aspx?p=2040824)
+8. [w3.org Graceful Degredation vs. Progressive Enhancement](http://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement)
+10. [Device Agnostic by Trent Walton](http://trentwalton.com/2014/03/10/device-agnostic/)
     </textarea>
     <script src="remark-latest.min.js">
     </script>
