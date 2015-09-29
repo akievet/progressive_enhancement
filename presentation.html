@@ -9,6 +9,13 @@
   <body>
     <textarea id="source">
 
+
+layout: true
+
+.footnote[[@_akievet](https://twitter.com/_akievet)]
+
+---
+
 class: center, middle
 
 <!-- "This talk is about how to use progressive enhancement to craft accessible,
@@ -20,13 +27,11 @@ class: center, middle
   styles are going in and out of fashion with the seasons, everyone could use a little more Zen." -->
 
 
-# Progressive Enhancement
+# progressive enhancement
 
 ---
 
-# The What
-.center[![Nature](./images/woods.png)]
-
+![Nature](./images/woods.png)
 
 ???
 
@@ -34,16 +39,10 @@ class: center, middle
 
 ---
 
-# Why I Care
-
----
-
-class: quote
-
-“Yeah, no, wow, it says you have a lot of Gulp and Angular, 
+.quote[“Yeah, no, wow, it says you have a lot of Gulp and Angular, 
 but I’m guessing you don’t use Fleejob or Grimmex with the 
 Snurt extensions? (Long sigh.) I’m just not sure if you’re
-gonna like working here.” &mdash; Bloomberg
+gonna like working here.” &mdash; Bloomberg]
 
 
 ???
@@ -53,9 +52,8 @@ Before quote: "JavaScript is fast-moving right now. Too much of what you know to
 
 ---
 
-class: fullstack, center
-
-.center[![Rachel Andrews FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f616b696576657470686f746f732f72616368656c2e6a7067)]
+![Rachel Andrews
+FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f616b696576657470686f746f732f72616368656c2e6a7067)
 
 ???
 
@@ -64,15 +62,12 @@ Saw Rachel Andrews speak at Full Stack Fest keynote. Breath of fresh air.
 - Co-founder of Perch CMS
 - Super speaker
 
-
 ---
 
-class: quote
-
-"a robust site or application in the more traditional sense 
+.quote["a robust site or application in the more traditional sense 
 minimizes its dependencies. The minimum dependency for a web 
 site should be an internet connection and the ability to parse HTML." 
-&mdash; BBC Future Media Standards and Guidelines
+&mdash; BBC Future Media Standards and Guidelines]
 
 ???
 
@@ -81,16 +76,16 @@ Two birds, one stone. Have a genuinely good place to begin learning (the basics)
 
 ---
 
+name: plain-text
+class: center, middle
 
-# Why?
+# why?
 
 ---
+class: center
 
-class: painted-image, margin-top
 
-# Platform
-
-.center[![Picture of wrapped gift](./images/gift.png)]
+![Picture of wrapped gift](./images/gift.png)
 
 ???
 
@@ -98,12 +93,7 @@ Platforms are static, defined software environments responsible for running neat
 
 ---
 
-class: painted-image, margin-top
-
-# Web App
-
-.center[![Picture of a ship in a storm](./images/ship.png)]
-
+![Picture of a ship in a storm](./images/ship.png)
 
 ???
 
@@ -111,20 +101,19 @@ This is the web
 
 ---
 
-class: center
+class: center, middle
 
-# Web != Platform
+# web != platform
 
 ???
 
 The web is a continuum.
 
-
 ---
 
-class: painted-image-large, margin-top
+class: middle
 
-.center[![A site with no content waiting on JS to load](./images/loading.png)]
+![A site with no content waiting on JS to load](./images/loading.png)
 
 ???
 
@@ -132,12 +121,12 @@ Ever see something like this?
 
 ---
 
-class: painted-image-large, margin-top
+class: center, middle
 
-# Why are HTML/CSS Good and JS Evil?
+# html/css vs javascript
 
-.center[![Picture of JS Stopping Everything for a little error// Single Point of
-Failure](./images/rope.png)]
+![Picture of JS Stopping Everything for a little error// Single Point of
+Failure](./images/rope.png)
 
 ???
 
@@ -147,12 +136,12 @@ SPOF: ‘a part of a system that, if it fails, will stop the entire system from 
 
 ---
 
-class: painted-image, margin-top
+class: center, middle
 
-# How did we get into this problem
+# how?
 
-.center[![Coercing printed page onto the web across
-browsers](./images/printed_to_screen.png)]
+![Coercing printed page onto the web across
+browsers](./images/printed_to_screen.png)
 
 ???
 
@@ -160,11 +149,13 @@ JS is an appealing solution as a way to exert control over the web.
 
 ---
 
-class: painted-image
+class: center, middle
 
-# John Allsopp: A Dao of Web Design
+.med-img[
+![Designer as God](./images/designer.png)
+]
+.title[A Dao of Web Design] .author[by John Allsopp]
 
-.center[![Designer as God](./images/designer.png)]
 
 ???
 
@@ -182,22 +173,23 @@ Legacy of print design
 
 ---
 
-class: painted-image-large, margin-top
+class: center, middle
 
-# Web != Print
+# web != print
 
-.center[![The *promise* of the web... A Better tomorrow. Accessibility to
-information](./images/bright_tomorrow.png)]
+![The *promise* of the web... A Better tomorrow. Accessibility to
+information](./images/bright_tomorrow.png)
 
 ???
+
 Facts of the medium of Web: It's adaptable and accessible! Regardless of the browser, platform or screen your reader chooses
 
 ---
 
-class: painted-image-large, margin-top
+class: middle
 
-.center[![Actions over Looks; Form follows Function (Img of LaCorbusier
-building?)](./images/lamp.png)]
+![Actions over Looks; Form follows Function (Img of LaCorbusier
+building?)](./images/lamp_2.png)
 
 ???
 
@@ -205,9 +197,17 @@ Your site will not look the same across browsers/devices. Think about what your 
 
 ---
 
-# Use HTML to convey information
-### Use `em` instead of `i` if you want to italicize for emphasis
-### Use form attributes appropriately [find radio button/checkbox anti-patterns]
+<!-- NEEDS WORK -->
+<!-- add a code snippet? -->
+
+# use HTML to convey information
+--
+
+- Use `em` instead of `i` if you want to italicize for emphasis
+
+--
+
+- Use form attributes appropriately [find radio button/checkbox anti-patterns]
 
 ???
 
@@ -215,9 +215,14 @@ Don't use HTML for presentation
 
 ---
 
-#Use CSS to *suggest* appearance. Don't rely on it.
-### Downloading fonts might not work. Have a fallback
-### Avoid absolute font sizes
+# Use CSS to *suggest* appearance. Don't rely on it.
+--
+
+- downloading fonts might not work. have a fallback
+
+--
+
+- avoid absolute font sizes
 
 ???
 
@@ -226,31 +231,33 @@ Screens are less readable than paper because of their low resolution.
 
 ---
 
-# Mobile-first structured CSS
+class: middle, center
+<!-- ADD A CODE SNIPPET HERE -->
+
+# mobile-first structured CSS
 
 ---
 
-class: margin-top, painted-image-large
+class: middle, center
 
-# Graceful Degradation vs. Progressive Enhancement
-.center[![Img of how they differ](./images/prog_enhancement.png)]
+![Img of how they differ](./images/prog_enhancement.png)
+# graceful degradation vs. progressive enhancement
+
+
+<!-- # Case Studies -->
+<!-- * Google -->
+<!-- * Twitter -->
+
+<!-- ??? -->
+
+<!-- Flesh these out if keeping in here -->
+
 
 ---
 
-# Case Studies
-* Google
-* Twitter
+class: center, middle
 
-???
-
-Flesh these out if keeping in here
-
-
----
-
-# The argument against PE
-
-# Some people will say...
+# against progressive enhancement
 
 ???
 Argument Against:
@@ -258,9 +265,13 @@ Argument Against:
 - Big companies are doing it (Instagram, Sack, Facebook, YouTube, Ebay Pinterest...)
 - Programmers should aim to catch errors before they cause problems
 
+<!-- SHOULD I ADD THESE ONTO INDIVIDUAL SLIDES? -->
+
 ---
 
-# Disclaimer: This is sort of a rant.
+class: center, middle
+
+# disclaimer
 
 ???
 
@@ -272,24 +283,24 @@ Of course PE might not be appropriate 100% of the time.
 
 ---
 
-# Tips
+class: center, middle
+
+# tips
 
 ---
 
-# Design in text
+class: center, middle
+
+.small-img[
+![Hierarchies of Linear structured test](./images/structured_html.png)
+]
+# design in text
 
 ???
 
 Debate over whether things are Apps vs Documents. If it's on the web, it's probably both!
 - Problem: many websites are designed from the UI in rather than from the content out
 
----
-
-class: painted-image, margin-top
-
-.center[![Hierarchies of Linear structured test](./images/structured_html.png)]
-
-???
 
 Start with the text-based foundation of the website or application you’re designing, and then add the complex interface as a layer on top of this text base.
 Benefits: 
@@ -299,36 +310,48 @@ Benefits:
 
 ---
 
-## Use a non-distracting text editor
+class: center, middle
+
+<!-- KEEP? -->
+
+## non-distracting text editor
 
 ---
 
-class: painted-image, margin-top
+class: center, middle
 
-## Use Feature Detection
+![Picture of Modernizr](./images/modernizr.png)
+## feature detection
 
-.center[![Picture of Modernizr](./images/modernizr.png)]
-
----
-
-## Avoid turning shortcuts and third party code into dependencies
-
----
-class: quote
-"Progressive enhancement is the *best* web development strategy based 
-on it being *the right thing to do*" &mdash; Jason Garber
 
 ---
 
-# Takeaways
+class: center, middle
+
+## short cuts !== third party code dependencies
 
 ---
 
-## Learn and teach core skills: HTML, CSS, JavaScript
+.quote["Progressive enhancement is the *best* web development strategy based 
+on it being *the right thing to do*" &mdash; Jason Garber]
 
 ---
 
-## Use PE from the get-go, it's a pain to implement later
+class: center, middle
+
+# takeaways
+
+---
+
+class: center, middle
+
+## learn and teach core skills: html, css, javascript
+
+---
+
+class: center, middle
+
+## use PE from the get-go, it's a pain to implement later
 
 ---
 
@@ -340,11 +363,9 @@ on it being *the right thing to do*" &mdash; Jason Garber
 
 ---
 
-class: quote
-
-"It should be clear our role as designers and developers to 
+.quote["It should be clear our role as designers and developers to 
 embrace this flexibility, and produce pages which, by being 
-flexible, are accessible to all." &mdash; John Allsopp
+flexible, are accessible to all." &mdash; John Allsopp]
 
 ---
 

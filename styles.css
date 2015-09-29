@@ -8,33 +8,52 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-.quote p{
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.quote{
   font-weight: 400;
   font-style: italic;
   font-size: 2em;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
-.fullstack img {
-  width: 100%;
+.footnote {
+  position: absolute;
+  bottom: 15px;
+  left: 60px;
+  font-size: 1em;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.painted-image img{
-  width: 50%;
+.med-img {
+  width: 60%;
+  margin: 0 auto;
 }
 
-.painted-image-large img {
-  width: 75%;
+.small-img {
+  width: 45%;
+  margin: 0 auto;
 }
 
-.margin-top img{
-  margin-top: 100px;
+.footnote a {
+  text-decoration: none;
+}
+
+h2 span {
+  display: block;
+}
+
+.title {
+  font-style: italic;
 }
 
 
 .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
-img {
-  width: 70%;
-}
 
