@@ -1,0 +1,187 @@
+1.
+* developer/consultant for Stride
+
+2.
+* wiki definition:
+"Progressive enhancement is a strategy for web design that *emphasizes
+accessibility*, semantic HTML markup, and external stylesheet and scripting
+technologies. Progressive enhancement *uses web technologies in a layered
+fashion* that allows everyone to *access the basic content and functionality* of
+a web page, using any browser or Internet connection, while also providing an
+enhanced version of the page to those with more advanced browser software or
+greater bandwidth."
+
+
+* new to tech - fed up with the exhausting game of catch up and know all the
+frameworks, only for them to go out of style 6 months later
+
+For next slide:
+* Bloomberg quote: Before quote: "JavaScript is fast-moving right now. Too much
+of what you know today will be useless in six months. Every hard-fought factoid
+about the absolute best and most principled way to use the language will be
+fetid zoo garbage by the end of the year. And some sniveling, bearded
+man-toddler will be looking slightly to your right with his pale,
+buzzword-infected eyes and awkwardly mumbling,"
+
+3.
+
+4.
+Saw Rachel Andrew speak at Full Stack Fest keynote. 
+* Breath of fresh air.
+* Involved with web standards project
+* Co-founder of Perch CMS
+* Super speaker
+
+5.
+* From she used in  slides.
+* BBC: "The core purpose of every document must not require JavaScript or CSS to function"
+* Two birds, one stone. 
+  * Have a genuinely good place to begin learning (the basics)
+  * create a site accessible to all from the start.
+
+6.
+* do we need to care about progressive enhacment
+
+7.
+* this is a platform
+  * static, defined software environments responsible for running neatly packaged bundles of code
+  * example: downloadable native app, installable desktop application, Flash
+  movie
+
+8.
+* this is the web
+* Jeremy Keith, "Continuum": "[The web] is not a platform where you get one 
+hundred percent or zero percent. It's a continuum"
+
+9.
+* Ever see something like this?
+* some curcial bit of JS cannot load, etc
+* PE will ensure this doesn't happen - always have crucial information served as
+html
+
+* Next: why is using html safer than js?
+
+10.
+* if css and html have behavior unsupported by a browser, they will simply ignore it. 
+* JS error: browers throw an error and stop processing JS => Single Point of Failure
+* SPOF: ‘a part of a system that, if it fails, will stop the entire system from working. SPOFs are undesirable in any system with a goal of high availability or reliability, be it a business practice, software application, or other industrial system’
+
+* why all the failures? how did we get here?
+
+11.
+* first TV shows were like radio
+  * voice overs to describe what viewers could already see
+* new mediums are hard to cope with at first
+* unlike print, your web page is not always going to look the same!
+* treating web like a platform by trying to coerce your design to look the same
+across all devices and browsers leads to epic failures
+
+12.
+* need to change the belief that designers are controllers
+Designers want to:
+- override the wishes of users and the choices they have made about their viewing experience
+- second guess platform differences, caused by different logical resolutions
+- all-knowing
+- will not tolerate anything less than a rendering on every browser that is pixel perfect with the rendering on their own machine
+
+Legacy of print design 
+- dimensions of a page can be controlled
+- size of the text
+- *facts* of the medium
+
+13.
+* the promise of the web: a better tomorrow
+* tv > radio, web > print! 
+* web is:
+  * accessible
+  * adaptable
+  * leaves choice with the users! - yay, power to the people!
+
+14.
+* graceful deg: designing for the best case - modern browser and good
+connection. providing alternative experiences in less ideal cases
+* prog enh: start by establishing a base level experience accessible to all and
+providing an enhanced experience for people who are able to access it
+
+15.
+
+16.
+* by Device Agnostic- Trent Walton
+* many devices to support
+* unreliability of mobile data networks
+* hostile browsers - people use outdate browsers
+
+17.
+* Instagram, Slack, Facebook, Youtube, Ebay, Pinterest...
+
+18.
+* sites serving primary content in html require less testing
+* good to have a solid base to fall back on, even if you do test
+
+* Next: progressive enhancement is good, but how do I do it?
+
+19.
+
+20.
+
+21.
+* PH5 Pendant light Poul Henningsen - form over function.
+  * uses three reflecting shades to spread light evenly, illuminating and
+  transforming the room with a smooth, glare-free warmth
+  * does what it was meant to do elegantly -- doesn't force the light to act
+  unnaturally.
+  * It's beautiful shape is a brilliant after-effect
+
+* think first: what is the crucial purpose, not how should it look.
+* know that your site will not look the same across browsers
+* but, the original purpose will still be met - no JS failures
+
+22.
+Debate over whether things are Apps vs Documents. If it's on the web, it's probably both!
+- Problem: many websites are designed from the UI in rather than from the content out
+
+
+Start with the text-based foundation of the website or application you’re designing, and then add the complex interface as a layer on top of this text base.
+Benefits: 
+- Focus on the structure of textual content
+- Irrelevant content becomes easy to spot (not hidden by design)
+- Easy to convert from word processor documents into structured plain text
+
+23.
+* unstyled HTML --> mobile ready! and mobile first!
+* starting point for responsive design
+
+24.
+
+25.
+* b and i tags have no semantic meaning, just represent visual style
+* em and strong tags have semantic meaning
+
+26.
+* don't rely
+* worst case - pages look plain, but info is still there
+
+27.
+* you can suggest a number of fonts
+* whether they appear or not depends on many factors
+  * which fonts a user has on their device
+  * network connection if importing them from external services
+  * user-supplied browser preferences
+
+28.
+* Screens are less readable than paper because of their low resolution.
+* users should be able to specify their default font size
+* using relative font sizes, like percentages and ems
+
+29.
+
+30.
+* use feature detection
+  * Modernizr detects which features the users' browser has to offer
+  * use results to tailor experience to the user
+
+31.
+* pe == egalitarian philosophy about the nature of the web
+* may not always be practical, but good to shoot for
+* "oh, that's still a thing?" YES
+* Important for all new developers to hear about, especially in the face of "hot new things" going around in the JavaScript world.

@@ -41,35 +41,31 @@ class: middle
 
 ???
 
-* wiki definition:
-"Progressive enhancement is a strategy for web design that *emphasizes
-accessibility*, semantic HTML markup, and external stylesheet and scripting
-technologies. Progressive enhancement *uses web technologies in a layered
-fashion* that allows everyone to *access the basic content and functionality* of
-a web page, using any browser or Internet connection, while also providing an
-enhanced version of the page to those with more advanced browser software or
-greater bandwidth."
+* this is me, in nature
+* what?
+  * web design strategy
+  * emphasizes accessibility
+  * web tech in a layered fashion
+  * allows everyone to access the basic content + functionality using any browser
+  * build enhancement on top of that
 
 
-* new to tech - fed up with the exhausting game of catch up and know all the
-frameworks, only for them to go out of style 6 months later
 
-For next slide:
-* Bloomberg quote: Before quote: "JavaScript is fast-moving right now. Too much
-of what you know today will be useless in six months. Every hard-fought factoid
-about the absolute best and most principled way to use the language will be
-fetid zoo garbage by the end of the year. And some sniveling, bearded
-man-toddler will be looking slightly to your right with his pale,
-buzzword-infected eyes and awkwardly mumbling,"
+<!-- For next slide: -->
+<!-- * Bloomberg quote: Before quote: "JavaScript is fast-moving right now. Too much -->
+<!-- of what you know today will be useless in six months. Every hard-fought factoid -->
+<!-- about the absolute best and most principled way to use the language will be -->
+<!-- fetid zoo garbage by the end of the year. And some sniveling, bearded -->
+<!-- man-toddler will be looking slightly to your right with his pale, -->
+<!-- buzzword-infected eyes and awkwardly mumbling," -->
 
----
 
-class: middle
+<!-- class: middle -->
 
-.quote[“Yeah, no, wow, it says you have a lot of Gulp and Angular, 
-but I’m guessing you don’t use Fleejob or Grimmex with the 
-Snurt extensions? (Long sigh.) I’m just not sure if you’re
-gonna like working here.” .author[&mdash; Bloomberg]]
+<!-- .quote[“Yeah, no, wow, it says you have a lot of Gulp and Angular, --> 
+<!-- but I’m guessing you don’t use Fleejob or Grimmex with the --> 
+<!-- Snurt extensions? (Long sigh.) I’m just not sure if you’re -->
+<!-- gonna like working here.” .author[&mdash; Bloomberg]] -->
 
 ---
 
@@ -83,11 +79,11 @@ FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308
 
 ???
 
-Saw Rachel Andrew speak at Full Stack Fest keynote. 
-* Breath of fresh air.
-* Involved with web standards project
-* Co-founder of Perch CMS
-* Super speaker
+* Rachel Andrew at Full Stack Fest
+* Takeaways:
+  * we should use progressive enhancement to create accessible sites
+  * focus on the basics of html, css, javascript
+  * wow!
 
 ---
 
@@ -100,11 +96,11 @@ site should be an internet connection and the ability to parse HTML."
 
 ???
 
-* From she used in  slides.
+* her slide 
 * BBC: "The core purpose of every document must not require JavaScript or CSS to function"
 * Two birds, one stone. 
-  * Have a genuinely good place to begin learning (the basics)
-  * create a site accessible to all from the start.
+  * solid place to focus learning
+  * create accessible web
 
 ---
 
@@ -114,11 +110,12 @@ class: center, middle
 # why?
 
 ???
-* do we need to care about progressive enhacment
+
+* why can't we all just have fun playing with all the flasy things!?
 
 ---
-class: center
 
+class: center
 
 ![Picture of wrapped gift](./images/gift.png)
 
@@ -126,8 +123,7 @@ class: center
 
 * this is a platform
   * static, defined software environments responsible for running neatly packaged bundles of code
-  * example: downloadable native app, installable desktop application, Flash
-  movie
+  * example: downloadable native app, installable desktop application
 
 
 ---
@@ -136,9 +132,11 @@ class: center
 
 ???
 
-* this is the web
-* Jeremy Keith, "Continuum": "[The web] is not a platform where you get one 
-hundred percent or zero percent. It's a continuum"
+* this is the web, a continuum
+  * don't know what you're going to get
+  * not all or nothing
+  * best case: super flashy fun thing you made
+  * worst case: plain html 
 
 ---
 
@@ -148,10 +146,7 @@ class: middle
 
 ???
 
-* Ever see something like this?
-* some curcial bit of JS cannot load, etc
-* PE will ensure this doesn't happen - always have crucial information served as
-html
+* some crucial bit of JS cannot load, etc
 
 * Next: why is using html safer than js?
 
@@ -166,12 +161,13 @@ Failure](./images/rope.png)
 
 ???
 
-* if css and html have behavior unsupported by a browser, they will simply ignore it. 
-* JS error: browers throw an error and stop processing JS => Single Point of Failure
+* if html/css have behavior unsupported by a browser, they will simply ignore it.
+* if js fails, browers throw an error and stop processing 
+* JS => Single Point of Failure
+
 * SPOF: ‘a part of a system that, if it fails, will stop the entire system from working. SPOFs are undesirable in any system with a goal of high availability or reliability, be it a business practice, software application, or other industrial system’
 
-* why all the failures? how did we get here?
-
+* why doesn't everyone just use semantic html? 
 ---
 
 class: center, middle
@@ -181,12 +177,17 @@ browsers](./images/printed_to_screen.png)
 
 ???
 
-* first TV shows were like radio
-  * voice overs to describe what viewers could already see
-* new mediums are hard to cope with at first
-* unlike print, your web page is not always going to look the same!
-* treating web like a platform by trying to coerce your design to look the same
-across all devices and browsers leads to epic failures
+* web == new medium
+* lack of understanding --> treating medium like something we do know.
+* tv + radio --> voiceovers over things views can see
+
+* facts of the medium
+  * radio - viewers can't see anything
+  * tv - viewers can!
+  * print - designers can control
+    * dimensions of a page
+    * size of text 
+  * web - they can't! 
 
 ---
 
@@ -201,16 +202,11 @@ class: center, middle
 ???
 
 * need to change the belief that designers are controllers
+
 Designers want to:
 - override the wishes of users and the choices they have made about their viewing experience
 - second guess platform differences, caused by different logical resolutions
-- all-knowing
 - will not tolerate anything less than a rendering on every browser that is pixel perfect with the rendering on their own machine
-
-Legacy of print design 
-- dimensions of a page can be controlled
-- size of the text
-- *facts* of the medium
 
 ---
 
@@ -228,6 +224,9 @@ information](./images/bright_tomorrow.png)
   * adaptable
   * leaves choice with the users! - yay, power to the people!
 
+* next: before I go farther, let's talk about alternatives and arguments against
+pe
+
 ---
 
 class: middle, center
@@ -241,6 +240,7 @@ class: middle, center
 connection. providing alternative experiences in less ideal cases
 * prog enh: start by establishing a base level experience accessible to all and
 providing an enhanced experience for people who are able to access it
+* rachel andrew: "accessibility should never be 'coming'"
 
 ---
 
@@ -250,20 +250,15 @@ class: center, middle
 
 ---
 
-class: center, middle
-
 .quote["javascript is the baseline in 2015"]
 
 ???
 
-* by Device Agnostic- Trent Walton
-* many devices to support
+* more devices than ever to support
 * unreliability of mobile data networks
 * hostile browsers - people use outdate browsers
 
----
-
-class: center, middle
+--
 
 .quote["big companies are doing it"]
 
@@ -271,9 +266,7 @@ class: center, middle
 
 * Instagram, Slack, Facebook, Youtube, Ebay, Pinterest...
 
----
-
-class: center, middle
+--
 
 .quote["programmers should aim to catch errors before they cause problems. we'll just test!"]
 
@@ -284,12 +277,6 @@ class: center, middle
 
 * Next: progressive enhancement is good, but how do I do it?
 
----
-
-class: middle
-
-.quote["Progressive enhancement is the *best* web development strategy based 
-on it being *the right thing to do*" .author[&mdash; Jason Garber]]
 
 ---
 
@@ -309,7 +296,7 @@ building?)](./images/lamp_2.png)
 
 ???
 
-* PH5 Pendant light Poul Henningsen - form over function.
+* PH5 Pendant light Poul Henningsen - form follows function.
   * uses three reflecting shades to spread light evenly, illuminating and
   transforming the room with a smooth, glare-free warmth
   * does what it was meant to do elegantly -- doesn't force the light to act
@@ -331,9 +318,7 @@ class: center, middle
 
 ???
 
-Debate over whether things are Apps vs Documents. If it's on the web, it's probably both!
 - Problem: many websites are designed from the UI in rather than from the content out
-
 
 Start with the text-based foundation of the website or application you’re designing, and then add the complex interface as a layer on top of this text base.
 Benefits: 
@@ -393,14 +378,6 @@ class: middle
 
 * b and i tags have no semantic meaning, just represent visual style
 * em and strong tags have semantic meaning
-
----
-
-<!-- - use form attributes appropriately [find radio button/checkbox anti-patterns] -->
-
-<!-- ??? -->
-
-<!-- Don't use HTML for presentation -->
 
 ---
 
