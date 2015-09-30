@@ -76,4 +76,11 @@ h2 span {
   color: #00FF8D;
 }
 
+.paintings img {
+  width: 165px;
+  display: inline-block;
+}
 
+.paintings {
+  padding-bottom: 50px;
+}
