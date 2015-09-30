@@ -27,52 +27,84 @@ class: center, middle
   styles are going in and out of fashion with the seasons, everyone could use a little more Zen." -->
 
 
-# progressive enhancement
+# zen and the art of progressive enhancement
+
+???
+
+* developer/consultant for Stride
 
 ---
+
+class: middle
 
 ![Nature](./images/woods.png)
 
 ???
 
-"Progressive enhancement is a strategy for web design that *emphasizes accessibility*, semantic HTML markup, and external stylesheet and scripting technologies. Progressive enhancement *uses web technologies in a layered fashion* that allows everyone to *access the basic content and functionality* of a web page, using any browser or Internet connection, while also providing an enhanced version of the page to those with more advanced browser software or greater bandwidth." -- wikipedia
+* wiki definition:
+"Progressive enhancement is a strategy for web design that *emphasizes
+accessibility*, semantic HTML markup, and external stylesheet and scripting
+technologies. Progressive enhancement *uses web technologies in a layered
+fashion* that allows everyone to *access the basic content and functionality* of
+a web page, using any browser or Internet connection, while also providing an
+enhanced version of the page to those with more advanced browser software or
+greater bandwidth."
+
+
+* new to tech - fed up with the exhausting game of catch up and know all the
+frameworks, only for them to go out of style 6 months later
+
+For next slide:
+* Bloomberg quote: Before quote: "JavaScript is fast-moving right now. Too much
+of what you know today will be useless in six months. Every hard-fought factoid
+about the absolute best and most principled way to use the language will be
+fetid zoo garbage by the end of the year. And some sniveling, bearded
+man-toddler will be looking slightly to your right with his pale,
+buzzword-infected eyes and awkwardly mumbling,"
 
 ---
+
+class: middle
 
 .quote[“Yeah, no, wow, it says you have a lot of Gulp and Angular, 
 but I’m guessing you don’t use Fleejob or Grimmex with the 
 Snurt extensions? (Long sigh.) I’m just not sure if you’re
-gonna like working here.” &mdash; Bloomberg]
-
-
-???
-
-Fed up with 'new hotness' and the insecurities of trying to catch up
-Before quote: "JavaScript is fast-moving right now. Too much of what you know today will be useless in six months. Every hard-fought factoid about the absolute best and most principled way to use the language will be fetid zoo garbage by the end of the year. And some sniveling, bearded man-toddler will be looking slightly to your right with his pale, buzzword-infected eyes and awkwardly mumbling,"
+gonna like working here.” .author[&mdash; Bloomberg]]
 
 ---
 
-![Rachel Andrews
+class: middle
+
+.fullstack[
+![Rachel Andrew
 FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f616b696576657470686f746f732f72616368656c2e6a7067)
+.caption[Rachel Andrew at Full Stack Fest]
+]
 
 ???
 
-Saw Rachel Andrews speak at Full Stack Fest keynote. Breath of fresh air.
-- Involved with web standards project
-- Co-founder of Perch CMS
-- Super speaker
+Saw Rachel Andrew speak at Full Stack Fest keynote. 
+* Breath of fresh air.
+* Involved with web standards project
+* Co-founder of Perch CMS
+* Super speaker
 
 ---
+
+class: middle
 
 .quote["a robust site or application in the more traditional sense 
 minimizes its dependencies. The minimum dependency for a web 
 site should be an internet connection and the ability to parse HTML." 
-&mdash; BBC Future Media Standards and Guidelines]
+&mdash; .author[BBC Future Media Standards and Guidelines]]
 
 ???
 
-From her slides. Also, the site says "The core purpose of every document must not require JavaScript or CSS to function"
-Two birds, one stone. Have a genuinely good place to begin learning (the basics) and also create a site accessible to all from the start.
+* From she used in  slides.
+* BBC: "The core purpose of every document must not require JavaScript or CSS to function"
+* Two birds, one stone. 
+  * Have a genuinely good place to begin learning (the basics)
+  * create a site accessible to all from the start.
 
 ---
 
@@ -80,6 +112,9 @@ name: plain-text
 class: center, middle
 
 # why?
+
+???
+* do we need to care about progressive enhacment
 
 ---
 class: center
@@ -89,7 +124,11 @@ class: center
 
 ???
 
-Platforms are static, defined software environments responsible for running neatly packaged bundles of code
+* this is a platform
+  * static, defined software environments responsible for running neatly packaged bundles of code
+  * example: downloadable native app, installable desktop application, Flash
+  movie
+
 
 ---
 
@@ -97,17 +136,9 @@ Platforms are static, defined software environments responsible for running neat
 
 ???
 
-This is the web
-
----
-
-class: center, middle
-
-# web != platform
-
-???
-
-The web is a continuum.
+* this is the web
+* Jeremy Keith, "Continuum": "[The web] is not a platform where you get one 
+hundred percent or zero percent. It's a continuum"
 
 ---
 
@@ -117,7 +148,12 @@ class: middle
 
 ???
 
-Ever see something like this?
+* Ever see something like this?
+* some curcial bit of JS cannot load, etc
+* PE will ensure this doesn't happen - always have crucial information served as
+html
+
+* Next: why is using html safer than js?
 
 ---
 
@@ -130,22 +166,27 @@ Failure](./images/rope.png)
 
 ???
 
-if css and html have behavior unsupported by a browser, they will simply ignore it. Browsers will throw an error and stop processing JS => Single Point of Failure
+* if css and html have behavior unsupported by a browser, they will simply ignore it. 
+* JS error: browers throw an error and stop processing JS => Single Point of Failure
+* SPOF: ‘a part of a system that, if it fails, will stop the entire system from working. SPOFs are undesirable in any system with a goal of high availability or reliability, be it a business practice, software application, or other industrial system’
 
-SPOF: ‘a part of a system that, if it fails, will stop the entire system from working. SPOFs are undesirable in any system with a goal of high availability or reliability, be it a business practice, software application, or other industrial system’
+* why all the failures? how did we get here?
 
 ---
 
 class: center, middle
-
-# how?
 
 ![Coercing printed page onto the web across
 browsers](./images/printed_to_screen.png)
 
 ???
 
-JS is an appealing solution as a way to exert control over the web.
+* first TV shows were like radio
+  * voice overs to describe what viewers could already see
+* new mediums are hard to cope with at first
+* unlike print, your web page is not always going to look the same!
+* treating web like a platform by trying to coerce your design to look the same
+across all devices and browsers leads to epic failures
 
 ---
 
@@ -159,7 +200,7 @@ class: center, middle
 
 ???
 
-Belief that designers are controllers
+* need to change the belief that designers are controllers
 Designers want to:
 - override the wishes of users and the choices they have made about their viewing experience
 - second guess platform differences, caused by different logical resolutions
@@ -175,66 +216,17 @@ Legacy of print design
 
 class: center, middle
 
-# web != print
-
 ![The *promise* of the web... A Better tomorrow. Accessibility to
 information](./images/bright_tomorrow.png)
 
 ???
 
-Facts of the medium of Web: It's adaptable and accessible! Regardless of the browser, platform or screen your reader chooses
-
----
-
-class: middle
-
-![Actions over Looks; Form follows Function (Img of LaCorbusier
-building?)](./images/lamp_2.png)
-
-???
-
-Your site will not look the same across browsers/devices. Think about what your pages do, not what they look like.
-
----
-
-<!-- NEEDS WORK -->
-<!-- add a code snippet? -->
-
-# use HTML to convey information
---
-
-- Use `em` instead of `i` if you want to italicize for emphasis
-
---
-
-- Use form attributes appropriately [find radio button/checkbox anti-patterns]
-
-???
-
-Don't use HTML for presentation
-
----
-
-# Use CSS to *suggest* appearance. Don't rely on it.
---
-
-- downloading fonts might not work. have a fallback
-
---
-
-- avoid absolute font sizes
-
-???
-
-With CSS you can suggest a number of fonts, but don't rely on a font being available regardless of how common it is.
-Screens are less readable than paper because of their low resolution. 
-
----
-
-class: middle, center
-<!-- ADD A CODE SNIPPET HERE -->
-
-# mobile-first structured CSS
+* the promise of the web: a better tomorrow
+* tv > radio, web > print! 
+* web is:
+  * accessible
+  * adaptable
+  * leaves choice with the users! - yay, power to the people!
 
 ---
 
@@ -243,15 +235,12 @@ class: middle, center
 ![Img of how they differ](./images/prog_enhancement.png)
 # graceful degradation vs. progressive enhancement
 
+???
 
-<!-- # Case Studies -->
-<!-- * Google -->
-<!-- * Twitter -->
-
-<!-- ??? -->
-
-<!-- Flesh these out if keeping in here -->
-
+* graceful deg: designing for the best case - modern browser and good
+connection. providing alternative experiences in less ideal cases
+* prog enh: start by establishing a base level experience accessible to all and
+providing an enhanced experience for people who are able to access it
 
 ---
 
@@ -259,33 +248,77 @@ class: center, middle
 
 # against progressive enhancement
 
-???
-Argument Against:
-- JS is the baseline in 2015
-- Big companies are doing it (Instagram, Sack, Facebook, YouTube, Ebay Pinterest...)
-- Programmers should aim to catch errors before they cause problems
+---
 
-<!-- SHOULD I ADD THESE ONTO INDIVIDUAL SLIDES? -->
+class: center, middle
+
+.quote["javascript is the baseline in 2015"]
+
+???
+
+* by Device Agnostic- Trent Walton
+* many devices to support
+* unreliability of mobile data networks
+* hostile browsers - people use outdate browsers
 
 ---
 
 class: center, middle
 
-# disclaimer
+.quote["big companies are doing it"]
 
 ???
 
-PE comes out of an egalitarian philosophy about the nature of the web. It may not always be the most practical thing to do, but it's good to shoot for.
-"oh, that's still a thing?" YES
-I'm passionate about it. 
-Important for all new developers to hear about, especially in the face of "hot new things" going around in the JavaScript world.
-Of course PE might not be appropriate 100% of the time. 
+* Instagram, Slack, Facebook, Youtube, Ebay, Pinterest...
 
 ---
 
 class: center, middle
 
-# tips
+.quote["programmers should aim to catch errors before they cause problems. we'll just test!"]
+
+???
+
+* sites serving primary content in html require less testing
+* good to have a solid base to fall back on, even if you do test
+
+* Next: progressive enhancement is good, but how do I do it?
+
+---
+
+class: middle
+
+.quote["Progressive enhancement is the *best* web development strategy based 
+on it being *the right thing to do*" .author[&mdash; Jason Garber]]
+
+---
+
+
+class: middle, center
+
+# how?
+
+---
+
+class: middle
+
+.fullstack[
+![Actions over Looks; Form follows Function (Img of LaCorbusier
+building?)](./images/lamp_2.png)
+]
+
+???
+
+* PH5 Pendant light Poul Henningsen - form over function.
+  * uses three reflecting shades to spread light evenly, illuminating and
+  transforming the room with a smooth, glare-free warmth
+  * does what it was meant to do elegantly -- doesn't force the light to act
+  unnaturally.
+  * It's beautiful shape is a brilliant after-effect
+
+* think first: what is the crucial purpose, not how should it look.
+* know that your site will not look the same across browsers
+* but, the original purpose will still be met - no JS failures
 
 ---
 
@@ -294,7 +327,7 @@ class: center, middle
 .small-img[
 ![Hierarchies of Linear structured test](./images/structured_html.png)
 ]
-# design in text
+# 1. design in text
 
 ???
 
@@ -310,33 +343,150 @@ Benefits:
 
 ---
 
-class: center, middle
+class: middle
 
-<!-- KEEP? -->
+## 2. use semantic html to convey content
 
-## non-distracting text editor
+???
+
+* unstyled HTML --> mobile ready! and mobile first!
+* starting point for responsive design
+
+---
+
+### semantic elements in html5 
+```html
+<article></article>
+<aside></aside>
+<details></details>
+<figcaption></figcaption>
+<figure></figure>
+<footer></footer>
+<header></header>
+<main></main>
+<mark></mark>
+<nav></nav>
+<section></section>
+<summary></summary>
+<time></time>
+```
+
+#### use instead of
+
+```html
+<div id="nav"></div>
+<div class="header"></div>
+```
+
+---
+
+class: middle
+
+### use `strong` and `em` tags instead of `b` and `i` tags
+
+```html
+<strong> something important </strong>
+<em> something to emphasize </em>
+```
+
+???
+
+* b and i tags have no semantic meaning, just represent visual style
+* em and strong tags have semantic meaning
+
+---
+
+<!-- - use form attributes appropriately [find radio button/checkbox anti-patterns] -->
+
+<!-- ??? -->
+
+<!-- Don't use HTML for presentation -->
+
+---
+
+class: middle
+
+## 3. use css to *suggest* appearance
+
+???
+
+* don't rely
+* worst case - pages look plain, but info is still there
+
+---
+
+class: middle
+
+### your beautiful fonts might not work
+
+???
+
+* you can suggest a number of fonts
+* whether they appear or not depends on many factors
+  * which fonts a user has on their device
+  * network connection if importing them from external services
+  * user-supplied browser preferences
+
+---
+
+class: middle
+
+### avoid absolute font sizes
+
+???
+
+* Screens are less readable than paper because of their low resolution.
+* users should be able to specify their default font size
+* using relative font sizes, like percentages and ems
+
+---
+
+class: middle
+
+### use mobile-first structured CSS
+
+```css
+
+// mobile is default
+.my-element {
+  width: 100%;
+  font-size: 1em;
+}
+
+// larger screens get special treatment
+@media screen and (min-width: 768px) {
+  width: 40%;
+  font-size: 1.2em;
+}
+```
 
 ---
 
 class: center, middle
 
 ![Picture of Modernizr](./images/modernizr.png)
-## feature detection
+## 4. use javascript to *enhance*
 
+???
+
+* use feature detection
+  * Modernizr detects which features the users' browser has to offer
+  * use results to tailor experience to the user
 
 ---
 
 class: center, middle
 
-## short cuts !== third party code dependencies
+# disclaimer
+
+???
+
+* pe == egalitarian philosophy about the nature of the web
+* may not always be practical, but good to shoot for
+* "oh, that's still a thing?" YES
+* Important for all new developers to hear about, especially in the face of "hot new things" going around in the JavaScript world.
 
 ---
-
-.quote["Progressive enhancement is the *best* web development strategy based 
-on it being *the right thing to do*" &mdash; Jason Garber]
-
----
-
 class: center, middle
 
 # takeaways
@@ -355,17 +505,23 @@ class: center, middle
 
 ---
 
+class: center, middle
+
 ## PE is cheaper to maintain since simpler code is more maintainable code
 
 ---
 
-## Pay Attention to Web Standards 
+class: center, middle
+
+## pay attention to web standards
 
 ---
 
+class: middle
+
 .quote["It should be clear our role as designers and developers to 
 embrace this flexibility, and produce pages which, by being 
-flexible, are accessible to all." &mdash; John Allsopp]
+flexible, are accessible to all." .author[&mdash; John Allsopp]]
 
 ---
 
@@ -380,8 +536,17 @@ flexible, are accessible to all." &mdash; John Allsopp]
 5. [SPOF](https://en.wikipedia.org/wiki/Single_point_of_failure)
 6. [John Allsopp: A Dao Of Web Design](http://alistapart.com/article/dao)
 7. [Designing in Text](http://www.peachpit.com/articles/article.aspx?p=2040824)
+by Stephen Hay
 8. [w3.org Graceful Degredation vs. Progressive Enhancement](http://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement)
 10. [Device Agnostic by Trent Walton](http://trentwalton.com/2014/03/10/device-agnostic/)
+10. [W3C HTML Techniques for Web Content Accessibility
+Guildelines](http://www.w3.org/TR/WCAG10-HTML-TECHS/)
+10. [w3schools: HTML5 Semantic
+Elements](http://www.w3schools.com/html/html5_semantic_elements.asp)
+10. [Progressive Enhancement Is Still
+Important](https://jakearchibald.com/2013/progressive-enhancement-still-important/)
+by Jake Archibald
+
     </textarea>
     <script src="remark-latest.min.js">
     </script>

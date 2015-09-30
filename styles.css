@@ -8,6 +8,10 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
+a {
+  color: #FF4E48;
+}
+
 img {
   display: block;
   margin-left: auto;
@@ -53,7 +57,23 @@ h2 span {
   font-style: italic;
 }
 
+.author {
+  color: #797979;
+}
 
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+.fullstack {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.fullstack img {
+  width: 100%;
+}
+
+
+.remark-code, .remark-inline-code { 
+  font-family: 'Ubuntu Mono';
+  color: #00FF8D;
+}
 
 
