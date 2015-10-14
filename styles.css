@@ -19,11 +19,49 @@ img {
   width: 70%;
 }
 
+.main-img {
+  width: 80%;
+  margin: 45px auto 0;
+}
+
+.main-img--small {
+  width: 60%;
+  margin: 45px auto 0;
+}
+
+.main-img--x-small {
+  width: 40%;
+  margin: 45px auto 0;
+}
+
+.main-img--large {
+  width: 100%;
+  margin: 45px auto 0;
+}
+
+.top-padding {
+  padding-top: 50px;
+}
+
+.almost-middle {
+  padding-top: 175px;
+}
+
 .quote{
   font-weight: 400;
   font-style: italic;
-  font-size: 2em;
+  font-size: 1.8em;
   line-height: 1.7;
+}
+
+.col1, .col2 {
+  width: 45%;
+  float: left;
+}
+
+.col2 {
+  margin-left: 10%;
+  margin-top: 45px;
 }
 
 .footnote {
@@ -35,15 +73,16 @@ img {
   font-style: normal;
 }
 
-.med-img {
-  width: 60%;
-  margin: 0 auto;
-}
+/* .rule { */
+/*   height: 250px; */
+/*   background-color: yellow; */
+/*   width: 100%; */
+/*   position: fixed; */
+/*   bottom: 0; */
+/*   right: 0; */
+/*   left: 0; */
+/* } */
 
-.small-img {
-  width: 45%;
-  margin: 0 auto;
-}
 
 .footnote a {
   text-decoration: none;
@@ -62,7 +101,7 @@ h2 span {
 }
 
 .fullstack {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 }
 

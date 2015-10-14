@@ -12,11 +12,12 @@
 
 layout: true
 
+
 .footnote[[@_akievet](https://twitter.com/_akievet)]
 
 ---
 
-class: center, middle
+class: center, top-padding
 
 <!-- "This talk is about how to use progressive enhancement to craft accessible,
   well-structured, and device agnostic code. As a junior developer, I found 
@@ -35,9 +36,9 @@ class: center, middle
 
 ---
 
-class: middle
-
-![Nature](./images/woods.png)
+.main-img[
+  ![Nature](./images/woods.png)
+]
 
 ???
 
@@ -49,27 +50,8 @@ class: middle
   * allows everyone to access the basic content + functionality using any browser
   * build enhancement on top of that
 
-
-
-<!-- For next slide: -->
-<!-- * Bloomberg quote: Before quote: "JavaScript is fast-moving right now. Too much -->
-<!-- of what you know today will be useless in six months. Every hard-fought factoid -->
-<!-- about the absolute best and most principled way to use the language will be -->
-<!-- fetid zoo garbage by the end of the year. And some sniveling, bearded -->
-<!-- man-toddler will be looking slightly to your right with his pale, -->
-<!-- buzzword-infected eyes and awkwardly mumbling," -->
-
-
-<!-- class: middle -->
-
-<!-- .quote[“Yeah, no, wow, it says you have a lot of Gulp and Angular, --> 
-<!-- but I’m guessing you don’t use Fleejob or Grimmex with the --> 
-<!-- Snurt extensions? (Long sigh.) I’m just not sure if you’re -->
-<!-- gonna like working here.” .author[&mdash; Bloomberg]] -->
-
 ---
 
-class: middle
 
 .fullstack[
 ![Rachel Andrew
@@ -87,8 +69,6 @@ FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308
 
 ---
 
-class: middle
-
 .quote["a robust site or application in the more traditional sense 
 minimizes its dependencies. The minimum dependency for a web 
 site should be an internet connection and the ability to parse HTML." 
@@ -105,7 +85,7 @@ site should be an internet connection and the ability to parse HTML."
 ---
 
 name: plain-text
-class: center, middle
+class: center, almost-middle 
 
 # why?
 
@@ -117,7 +97,9 @@ class: center, middle
 
 class: center
 
-![Picture of wrapped gift](./images/gift.png)
+.main-img--small[
+  ![Picture of wrapped gift](./images/gift.png)
+]
 
 ???
 
@@ -128,7 +110,9 @@ class: center
 
 ---
 
-![Picture of a ship in a storm](./images/ship.png)
+.main-img[
+  ![Picture of a ship in a storm](./images/ship.png)
+]
 
 ???
 
@@ -140,9 +124,9 @@ class: center
 
 ---
 
-class: middle
-
-![A site with no content waiting on JS to load](./images/loading.png)
+.main-img[
+  ![A site with no content waiting on JS to load](./images/loading.png)
+]
 
 ???
 
@@ -152,12 +136,14 @@ class: middle
 
 ---
 
-class: center, middle
+class: center, top-padding
 
 # html/css vs javascript
 
-![Picture of JS Stopping Everything for a little error// Single Point of
-Failure](./images/rope.png)
+.main-img[
+  ![Picture of JS Stopping Everything for a little error// Single Point of
+  Failure](./images/rope.png)
+]
 
 ???
 
@@ -170,10 +156,12 @@ Failure](./images/rope.png)
 * why doesn't everyone just use semantic html? 
 ---
 
-class: center, middle
+class: center
 
-![Coercing printed page onto the web across
-browsers](./images/printed_to_screen.png)
+.main-img[
+  ![Coercing printed page onto the web across
+  browsers](./images/printed_to_screen.png)
+]
 
 ???
 
@@ -191,10 +179,10 @@ browsers](./images/printed_to_screen.png)
 
 ---
 
-class: center, middle
+class: center
 
-.med-img[
-![Designer as God](./images/designer.png)
+.main-img--small[
+  ![Designer as God](./images/designer.png)
 ]
 .title[A Dao of Web Design] .author[by John Allsopp]
 
@@ -210,10 +198,12 @@ Designers want to:
 
 ---
 
-class: center, middle
+class: center
 
-![The *promise* of the web... A Better tomorrow. Accessibility to
-information](./images/bright_tomorrow.png)
+.main-img--large[
+  ![The *promise* of the web... A Better tomorrow. Accessibility to
+  information](./images/bright_tomorrow.png)
+]
 
 ???
 
@@ -229,10 +219,10 @@ pe
 
 ---
 
-class: middle, center
+class: center, padding-top
 
 ![Img of how they differ](./images/prog_enhancement.png)
-# graceful degradation vs. progressive enhancement
+## graceful degradation vs. progressive enhancement
 
 ???
 
@@ -244,9 +234,9 @@ providing an enhanced experience for people who are able to access it
 
 ---
 
-class: center, middle
+class: center, almost-middle
 
-# against progressive enhancement
+## against progressive enhancement
 
 ---
 
@@ -281,17 +271,15 @@ class: center, middle
 ---
 
 
-class: middle, center
+class: center, almost-middle
 
 # how?
 
 ---
 
-class: middle
-
-.fullstack[
-![Actions over Looks; Form follows Function (Img of LaCorbusier
-building?)](./images/lamp_2.png)
+.main-img[
+  ![Actions over Looks; Form follows Function (Img of LaCorbusier
+  building?)](./images/lamp_2.png)
 ]
 
 ???
@@ -309,12 +297,11 @@ building?)](./images/lamp_2.png)
 
 ---
 
-class: center, middle
+## 1. design in text
 
-.small-img[
-![Hierarchies of Linear structured test](./images/structured_html.png)
+.main-img--x-small[
+  ![Hierarchies of Linear structured test](./images/structured_html.png)
 ]
-# 1. design in text
 
 ???
 
@@ -328,8 +315,6 @@ Benefits:
 
 ---
 
-class: middle
-
 ## 2. use semantic html to convey content
 
 ???
@@ -339,49 +324,36 @@ class: middle
 
 ---
 
-### semantic elements in html5 
-```html
-<article></article>
-<aside></aside>
-<details></details>
-<figcaption></figcaption>
-<figure></figure>
-<footer></footer>
-<header></header>
-<main></main>
-<mark></mark>
-<nav></nav>
-<section></section>
-<summary></summary>
-<time></time>
-```
+.col1[
+  ### semantic elements in html5 
+  ```html
+  <article></article>
+  <aside></aside>
+  <details></details>
+  <figcaption></figcaption>
+  <figure></figure>
+  <footer></footer>
+  <header></header>
+  <main></main>
+  <mark></mark>
+  <nav></nav>
+  <section></section>
+  <summary></summary>
+  <time></time>
+  ```
+]
 
-#### use instead of
+.col2[
+  ### use instead of
 
-```html
-<div id="nav"></div>
-<div class="header"></div>
-```
+  ```html
+  <div id="nav"></div>
+  <div class="header"></div>
+  ```
 
----
-
-class: middle
-
-### use `strong` and `em` tags instead of `b` and `i` tags
-
-```html
-<strong> something important </strong>
-<em> something to emphasize </em>
-```
-
-???
-
-* b and i tags have no semantic meaning, just represent visual style
-* em and strong tags have semantic meaning
+]
 
 ---
-
-class: middle
 
 ## 3. use css to *suggest* appearance
 
@@ -390,23 +362,10 @@ class: middle
 * don't rely
 * worst case - pages look plain, but info is still there
 
----
-
-class: middle
-
-### your beautiful fonts might not work
-
-???
-
-* you can suggest a number of fonts
-* whether they appear or not depends on many factors
-  * which fonts a user has on their device
-  * network connection if importing them from external services
-  * user-supplied browser preferences
 
 ---
 
-class: middle
+class: top-padding
 
 ### avoid absolute font sizes
 
@@ -418,19 +377,21 @@ class: middle
 
 ---
 
-class: middle
+class: top-padding
 
 ### use mobile-first structured CSS
 
 ```css
 
 // mobile is default
+
 .my-element {
   width: 100%;
   font-size: 1em;
 }
 
 // larger screens get special treatment
+
 @media screen and (min-width: 768px) {
   width: 40%;
   font-size: 1.2em;
@@ -439,10 +400,11 @@ class: middle
 
 ---
 
-class: center, middle
 
-![Picture of Modernizr](./images/modernizr.png)
 ## 4. use javascript to *enhance*
+.main-img[
+  ![Picture of Modernizr](./images/modernizr.png)
+]
 
 ???
 
@@ -452,7 +414,7 @@ class: center, middle
 
 ---
 
-class: center, middle
+class: center, almost-middle
 
 # disclaimer
 
@@ -464,37 +426,37 @@ class: center, middle
 * Important for all new developers to hear about, especially in the face of "hot new things" going around in the JavaScript world.
 
 ---
-class: center, middle
+class: center, almost-middle
 
 # takeaways
 
 ---
 
-class: center, middle
+class: top-padding
 
 ## learn and teach core skills: html, css, javascript
 
 ---
 
-class: center, middle
+class: top-padding
 
-## use PE from the get-go, it's a pain to implement later
-
----
-
-class: center, middle
-
-## PE is cheaper to maintain since simpler code is more maintainable code
+## use *progressive enhancement* from the get-go, it's a pain to implement later
 
 ---
 
-class: center, middle
+class: top-padding
+
+## *progressive enhancement* is cheaper to maintain since simpler code is more maintainable code
+
+---
+
+class: top-padding
 
 ## pay attention to web standards
 
 ---
 
-class: middle
+class: top-padding
 
 .quote["It should be our role as designers and developers to 
 embrace this flexibility, and produce pages which, by being 
@@ -526,28 +488,27 @@ by Jake Archibald
 
 ---
 
-class: center, middle
+class: center
 
 .paintings[
-![Nature](./images/woods.png)
-![Picture of wrapped gift](./images/gift.png)
-![Picture of a ship in a storm](./images/ship.png)
-![A site with no content waiting on JS to load](./images/loading.png)
-![Picture of JS Stopping Everything for a little error// Single Point of
-Failure](./images/rope.png)
-![Coercing printed page onto the web across
-browsers](./images/printed_to_screen.png)
-![Designer as God](./images/designer.png)
-![The *promise* of the web... A Better tomorrow. Accessibility to
-information](./images/bright_tomorrow.png)
-![Img of how they differ](./images/prog_enhancement.png)
-![Actions over Looks; Form follows Function (Img of LaCorbusier
-building?)](./images/lamp_2.png)
-![Hierarchies of Linear structured test](./images/structured_html.png)
-![Picture of Modernizr](./images/modernizr.png)
+  ![Nature](./images/woods.png)
+  ![Picture of wrapped gift](./images/gift.png)
+  ![Picture of a ship in a storm](./images/ship.png)
+  ![A site with no content waiting on JS to load](./images/loading.png)
+  ![Picture of JS Stopping Everything for a little error// Single Point of
+  Failure](./images/rope.png)
+  ![Coercing printed page onto the web across
+  browsers](./images/printed_to_screen.png)
+  ![Designer as God](./images/designer.png)
+  ![The *promise* of the web... A Better tomorrow. Accessibility to
+  information](./images/bright_tomorrow.png)
+  ![Img of how they differ](./images/prog_enhancement.png)
+  ![Actions over Looks; Form follows Function (Img of LaCorbusier
+  building?)](./images/lamp_2.png)
+  ![Hierarchies of Linear structured test](./images/structured_html.png)
+  ![Picture of Modernizr](./images/modernizr.png)
 ]
 
----
 
     </textarea>
     <script src="remark-latest.min.js">
