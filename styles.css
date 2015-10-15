@@ -76,7 +76,7 @@ img {
   background-color: #d4f1b2;
   position: absolute;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   text-align: right;
   padding-right: 20px;
@@ -141,4 +141,8 @@ h2 span {
 
 .paintings {
   padding-bottom: 50px;
+}
+
+.resources a {
+  color: #fc571f;
 }
