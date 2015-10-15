@@ -9,7 +9,7 @@ h1, h2, h3 {
 }
 
 a {
-  color: #FF4E48;
+  color: #D4F1B2;
 }
 
 img {
@@ -17,6 +17,10 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+}
+
+.all-slides {
+  padding-top: 75px;
 }
 
 .main-img {
@@ -65,12 +69,27 @@ img {
 }
 
 .footnote {
+  width: 100%;
+  height: 40px;
+  top: 0;
+  right: 0;
+  background-color: #d4f1b2;
   position: absolute;
-  bottom: 15px;
-  left: 60px;
   font-size: 1em;
   font-weight: 400;
   font-style: normal;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.footnote a {
+  color: black;
+}
+
+.dark {
+  color: white;
+  background-color: black;
 }
 
 /* .rule { */
