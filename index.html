@@ -12,11 +12,15 @@
 
 layout: true
 
-.footnote[[@_akievet](https://twitter.com/_akievet)]
+class: all-slides
+
+.info-bar[
+  [@_akievet](https://twitter.com/_akievet)
+]
 
 ---
 
-class: center, middle
+class: center, color-bkg, almost-middle
 
 <!-- "This talk is about how to use progressive enhancement to craft accessible,
   well-structured, and device agnostic code. As a junior developer, I found 
@@ -29,478 +33,164 @@ class: center, middle
 
 # zen and the art of progressive enhancement
 
-???
-
-* developer/consultant for Stride
-
 ---
 
-class: middle
-
-![Nature](./images/woods.png)
-
-???
-
-* this is me, in nature
-* what?
-  * web design strategy
-  * emphasizes accessibility
-  * web tech in a layered fashion
-  * allows everyone to access the basic content + functionality using any browser
-  * build enhancement on top of that
-
-
-
-<!-- For next slide: -->
-<!-- * Bloomberg quote: Before quote: "JavaScript is fast-moving right now. Too much -->
-<!-- of what you know today will be useless in six months. Every hard-fought factoid -->
-<!-- about the absolute best and most principled way to use the language will be -->
-<!-- fetid zoo garbage by the end of the year. And some sniveling, bearded -->
-<!-- man-toddler will be looking slightly to your right with his pale, -->
-<!-- buzzword-infected eyes and awkwardly mumbling," -->
-
-
-<!-- class: middle -->
-
-<!-- .quote[“Yeah, no, wow, it says you have a lot of Gulp and Angular, --> 
-<!-- but I’m guessing you don’t use Fleejob or Grimmex with the --> 
-<!-- Snurt extensions? (Long sigh.) I’m just not sure if you’re -->
-<!-- gonna like working here.” .author[&mdash; Bloomberg]] -->
-
----
-
-class: middle
-
-.fullstack[
-![Rachel Andrew
-FSF](https://camo.githubusercontent.com/1bd9e66657d124bd5d3ecb0ba25d9c828f068308/68747470733a2f2f73332d75732d776573742d322e616d617a6f6e6177732e636f6d2f616b696576657470686f746f732f72616368656c2e6a7067)
-.caption[Rachel Andrew at Full Stack Fest]
+.main-img--small[
+  ![Stride Logo](./images/stride_logo_drawing.png)
 ]
 
-???
+---
 
-* Rachel Andrew at Full Stack Fest
-* Takeaways:
-  * we should use progressive enhancement to create accessible sites
-  * focus on the basics of html, css, javascript
-  * wow!
+.main-img[
+  ![Nature](./images/woods.png)
+]
 
 ---
 
-class: middle
+class: color-bkg
 
 .quote["a robust site or application in the more traditional sense 
 minimizes its dependencies. The minimum dependency for a web 
 site should be an internet connection and the ability to parse HTML." 
 &mdash; .author[BBC Future Media Standards and Guidelines]]
 
-???
-
-* her slide 
-* BBC: "The core purpose of every document must not require JavaScript or CSS to function"
-* Two birds, one stone. 
-  * solid place to focus learning
-  * create accessible web
-
 ---
 
 name: plain-text
-class: center, middle
+class: center, almost-middle, color-bkg
 
 # why?
-
-???
-
-* why can't we all just have fun playing with all the flasy things!?
 
 ---
 
 class: center
 
-![Picture of wrapped gift](./images/gift.png)
-
-???
-
-* this is a platform
-  * static, defined software environments responsible for running neatly packaged bundles of code
-  * example: downloadable native app, installable desktop application
-
-
----
-
-![Picture of a ship in a storm](./images/ship.png)
-
-???
-
-* this is the web, a continuum
-  * don't know what you're going to get
-  * not all or nothing
-  * best case: super flashy fun thing you made
-  * worst case: plain html 
-
----
-
-class: middle
-
-![A site with no content waiting on JS to load](./images/loading.png)
-
-???
-
-* some crucial bit of JS cannot load, etc
-
-* Next: why is using html safer than js?
-
----
-
-class: center, middle
-
-# html/css vs javascript
-
-![Picture of JS Stopping Everything for a little error// Single Point of
-Failure](./images/rope.png)
-
-???
-
-* if html/css have behavior unsupported by a browser, they will simply ignore it.
-* if js fails, browers throw an error and stop processing 
-* JS => Single Point of Failure
-
-* SPOF: ‘a part of a system that, if it fails, will stop the entire system from working. SPOFs are undesirable in any system with a goal of high availability or reliability, be it a business practice, software application, or other industrial system’
-
-* why doesn't everyone just use semantic html? 
----
-
-class: center, middle
-
-![Coercing printed page onto the web across
-browsers](./images/printed_to_screen.png)
-
-???
-
-* web == new medium
-* lack of understanding --> treating medium like something we do know.
-* tv + radio --> voiceovers over things views can see
-
-* facts of the medium
-  * radio - viewers can't see anything
-  * tv - viewers can!
-  * print - designers can control
-    * dimensions of a page
-    * size of text 
-  * web - they can't! 
-
----
-
-class: center, middle
-
-.med-img[
-![Designer as God](./images/designer.png)
+.main-img--small[
+  ![Picture of wrapped gift](./images/gift.png)
 ]
-.title[A Dao of Web Design] .author[by John Allsopp]
-
-
-???
-
-* need to change the belief that designers are controllers
-
-Designers want to:
-- override the wishes of users and the choices they have made about their viewing experience
-- second guess platform differences, caused by different logical resolutions
-- will not tolerate anything less than a rendering on every browser that is pixel perfect with the rendering on their own machine
 
 ---
 
-class: center, middle
-
-![The *promise* of the web... A Better tomorrow. Accessibility to
-information](./images/bright_tomorrow.png)
-
-???
-
-* the promise of the web: a better tomorrow
-* tv > radio, web > print! 
-* web is:
-  * accessible
-  * adaptable
-  * leaves choice with the users! - yay, power to the people!
-
-* next: before I go farther, let's talk about alternatives and arguments against
-pe
+.main-img[
+  ![Picture of a ship in a storm](./images/ship.png)
+]
 
 ---
 
-class: middle, center
-
-![Img of how they differ](./images/prog_enhancement.png)
-# graceful degradation vs. progressive enhancement
-
-???
-
-* graceful deg: designing for the best case - modern browser and good
-connection. providing alternative experiences in less ideal cases
-* prog enh: start by establishing a base level experience accessible to all and
-providing an enhanced experience for people who are able to access it
-* rachel andrew: "accessibility should never be 'coming'"
+.main-img[
+  ![A site with no content waiting on JS to load](./images/loading.png)
+]
 
 ---
 
-class: center, middle
+class: center, almost-middle
 
-# against progressive enhancement
-
----
-
-.quote["javascript is the baseline in 2015"]
-
-???
-
-* more devices than ever to support
-* unreliability of mobile data networks
-* hostile browsers - people use outdate browsers
-
---
-
-.quote["big companies are doing it"]
-
-???
-
-* Instagram, Slack, Facebook, Youtube, Ebay, Pinterest...
-
---
-
-.quote["programmers should aim to catch errors before they cause problems. we'll just test!"]
-
-???
-
-* sites serving primary content in html require less testing
-* good to have a solid base to fall back on, even if you do test
-
-* Next: progressive enhancement is good, but how do I do it?
-
+![rope breaking](./images/rope.png)
 
 ---
 
-
-class: middle, center
+class: center, color-bkg, almost-middle
 
 # how?
 
 ---
 
-class: middle
-
-.fullstack[
-![Actions over Looks; Form follows Function (Img of LaCorbusier
-building?)](./images/lamp_2.png)
+.main-img[
+  ![form follows function](./images/lamp_2.png)
 ]
-
-???
-
-* PH5 Pendant light Poul Henningsen - form follows function.
-  * uses three reflecting shades to spread light evenly, illuminating and
-  transforming the room with a smooth, glare-free warmth
-  * does what it was meant to do elegantly -- doesn't force the light to act
-  unnaturally.
-  * It's beautiful shape is a brilliant after-effect
-
-* think first: what is the crucial purpose, not how should it look.
-* know that your site will not look the same across browsers
-* but, the original purpose will still be met - no JS failures
 
 ---
 
-class: center, middle
 
-.small-img[
-![Hierarchies of Linear structured test](./images/structured_html.png)
+## 1. design in text
+
+.main-img--x-small[
+  ![Hierarchies of Linear structured test](./images/structured_html.png)
 ]
-# 1. design in text
-
-???
-
-- Problem: many websites are designed from the UI in rather than from the content out
-
-Start with the text-based foundation of the website or application you’re designing, and then add the complex interface as a layer on top of this text base.
-Benefits: 
-- Focus on the structure of textual content
-- Irrelevant content becomes easy to spot (not hidden by design)
-- Easy to convert from word processor documents into structured plain text
 
 ---
-
-class: middle
 
 ## 2. use semantic html to convey content
 
-???
-
-* unstyled HTML --> mobile ready! and mobile first!
-* starting point for responsive design
-
 ---
 
-### semantic elements in html5 
-```html
-<article></article>
-<aside></aside>
-<details></details>
-<figcaption></figcaption>
-<figure></figure>
-<footer></footer>
-<header></header>
-<main></main>
-<mark></mark>
-<nav></nav>
-<section></section>
-<summary></summary>
-<time></time>
-```
+.col1[
+  ### semantic elements in html5 
+  ```html
+  <article>
+  <aside>
+  <details>
+  <figcaption>
+  <figure>
+  <footer>
+  <header>
+  <main>
+  <mark>
+  <nav>
+  <section>
+  <summary>
+  <time>
+  ```
+]
 
-#### use instead of
+.col2[
+  ### use instead of
 
-```html
-<div id="nav"></div>
-<div class="header"></div>
-```
+  ```html
+  <div id="nav"></div>
+  <div class="header"></div>
+  ```
 
----
-
-class: middle
-
-### use `strong` and `em` tags instead of `b` and `i` tags
-
-```html
-<strong> something important </strong>
-<em> something to emphasize </em>
-```
-
-???
-
-* b and i tags have no semantic meaning, just represent visual style
-* em and strong tags have semantic meaning
+]
 
 ---
-
-class: middle
 
 ## 3. use css to *suggest* appearance
 
-???
-
-* don't rely
-* worst case - pages look plain, but info is still there
-
 ---
 
-class: middle
 
-### your beautiful fonts might not work
-
-???
-
-* you can suggest a number of fonts
-* whether they appear or not depends on many factors
-  * which fonts a user has on their device
-  * network connection if importing them from external services
-  * user-supplied browser preferences
-
----
-
-class: middle
-
-### avoid absolute font sizes
-
-???
-
-* Screens are less readable than paper because of their low resolution.
-* users should be able to specify their default font size
-* using relative font sizes, like percentages and ems
-
----
-
-class: middle
-
-### use mobile-first structured CSS
-
-```css
-
-// mobile is default
-.my-element {
-  width: 100%;
-  font-size: 1em;
-}
-
-// larger screens get special treatment
-@media screen and (min-width: 768px) {
-  width: 40%;
-  font-size: 1.2em;
-}
-```
-
----
-
-class: center, middle
-
-![Picture of Modernizr](./images/modernizr.png)
 ## 4. use javascript to *enhance*
-
-???
-
-* use feature detection
-  * Modernizr detects which features the users' browser has to offer
-  * use results to tailor experience to the user
+.main-img[
+  ![Picture of Modernizr](./images/modernizr.png)
+]
 
 ---
 
-class: center, middle
-
-# disclaimer
-
-???
-
-* pe == egalitarian philosophy about the nature of the web
-* may not always be practical, but good to shoot for
-* "oh, that's still a thing?" YES
-* Important for all new developers to hear about, especially in the face of "hot new things" going around in the JavaScript world.
-
----
-class: center, middle
+class: center, almost-middle, color-bkg
 
 # takeaways
 
 ---
 
-class: center, middle
-
 ## learn and teach core skills: html, css, javascript
 
 ---
 
-class: center, middle
-
-## use PE from the get-go, it's a pain to implement later
+## use *progressive enhancement* from the get-go, it's a pain to implement later
 
 ---
 
-class: center, middle
-
-## PE is cheaper to maintain since simpler code is more maintainable code
+## *progressive enhancement* is cheaper to maintain since simpler code is more maintainable code
 
 ---
-
-class: center, middle
 
 ## pay attention to web standards
+.main-img[
+  ![brighter tomorrow](./images/bright_tomorrow.png)
+]
 
 ---
 
-class: middle
+class: color-bkg
 
 .quote["It should be our role as designers and developers to 
 embrace this flexibility, and produce pages which, by being 
 flexible, are accessible to all." .author[&mdash; John Allsopp]]
 
 ---
+
+class: top-padding, resources
 
 ## Resources
 1. [Wikipedia: Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
@@ -526,28 +216,22 @@ by Jake Archibald
 
 ---
 
-class: center, middle
+class: center, top-padding
 
 .paintings[
-![Nature](./images/woods.png)
-![Picture of wrapped gift](./images/gift.png)
-![Picture of a ship in a storm](./images/ship.png)
-![A site with no content waiting on JS to load](./images/loading.png)
-![Picture of JS Stopping Everything for a little error// Single Point of
-Failure](./images/rope.png)
-![Coercing printed page onto the web across
-browsers](./images/printed_to_screen.png)
-![Designer as God](./images/designer.png)
-![The *promise* of the web... A Better tomorrow. Accessibility to
-information](./images/bright_tomorrow.png)
-![Img of how they differ](./images/prog_enhancement.png)
-![Actions over Looks; Form follows Function (Img of LaCorbusier
-building?)](./images/lamp_2.png)
-![Hierarchies of Linear structured test](./images/structured_html.png)
-![Picture of Modernizr](./images/modernizr.png)
+  ![Nature](./images/woods.png)
+  ![Picture of wrapped gift](./images/gift.png)
+  ![Picture of a ship in a storm](./images/ship.png)
+  ![A site with no content waiting on JS to load](./images/loading.png)
+  ![Picture of JS Stopping Everything for a little error// Single Point of
+  Failure](./images/rope.png)
+  ![The *promise* of the web... A Better tomorrow. Accessibility to
+  information](./images/bright_tomorrow.png)
+  ![Actions over Looks; Form follows Function (Img of LaCorbusier
+  building?)](./images/lamp_2.png)
+  ![Picture of Modernizr](./images/modernizr.png)
 ]
 
----
 
     </textarea>
     <script src="remark-latest.min.js">
