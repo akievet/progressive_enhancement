@@ -2,14 +2,17 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-body { font-family: 'Merriweather', serif}
+body {
+  font-family: 'Merriweather', serif
+}
 
 h1, h2, h3 {
   font-weight: 700;
+  line-height: 1.5;
 }
 
 a {
-  color: #D4F1B2;
+  color: #10C9C3;
 }
 
 img {
@@ -68,12 +71,12 @@ img {
   margin-top: 45px;
 }
 
-.footnote {
+.info-bar {
   width: 100%;
   height: 40px;
+  background-color: white;
   top: 0;
   right: 0;
-  background-color: #d4f1b2;
   position: absolute;
   font-size: 1em;
   font-weight: 700;
@@ -81,6 +84,15 @@ img {
   text-align: right;
   padding-right: 20px;
   padding-top: 10px;
+}
+
+.info-bar a {
+  text-decoration: none;
+}
+
+.color-bkg {
+  background-color: #FF836E;
+  color: white;
 }
 
 .footnote a {
@@ -128,14 +140,14 @@ h2 span {
   width: 100%;
 }
 
-
 .remark-code, .remark-inline-code { 
+  line-height: 1.5;
   font-family: 'Ubuntu Mono';
   color: #00FF8D;
 }
 
 .paintings img {
-  width: 165px;
+  width: 215px;
   display: inline-block;
 }
 
@@ -143,6 +155,3 @@ h2 span {
   padding-bottom: 50px;
 }
 
-.resources a {
-  color: #fc571f;
-}
